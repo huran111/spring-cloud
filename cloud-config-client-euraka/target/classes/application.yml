@@ -1,0 +1,7 @@
+server:
+  port: 8977
+spring:
+  application:
+    name: cloud-config-client-euraka
+
+

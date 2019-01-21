@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config-server-euraka #表明服务发现是允许的
+  security:
+    user:
+      name: user
+      password: password123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: 192.168.10.30
+    metadata-map: #自定义Eureka元数据
+      zone: ABC #可以理解为元数据
+      huran: HURAN #不会影响客户端行为
+    #appname: user-producter  #填坑 swagger
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
