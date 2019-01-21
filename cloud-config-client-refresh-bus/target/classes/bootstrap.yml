@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8978
+      profile: dev
+      label: master
+  application:
+    name: huran
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: hudabai
