@@ -1,0 +1,13 @@
+spring:
+  security:
+      user:
+        name: user
+        password: password123
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huran111/conf-repo-huran.git
+
+encrypt:
+  key: huran
