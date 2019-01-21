@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      #uri: http://localhost:8978
+      profile: dev
+      label: master
+      uri:
+  application:
+    name: huran
