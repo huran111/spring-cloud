@@ -1,0 +1,5 @@
+server:
+  port: 8978
+spring:
+  application:
+    name: cloud-config-server-euraka
