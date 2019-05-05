@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: euraka-ha
+---
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7777/eureka/
+server:
+  port: 8888
+
+---
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8888/eureka/
+server:
+  port: 7777

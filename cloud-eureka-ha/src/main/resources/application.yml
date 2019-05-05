@@ -1,0 +1,33 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:6666/eureka/,http://peer2:7777/eureka/,http://peer3:8888/eureka/
+spring:
+  application:
+    name: eureka-ha-three
+---
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: 127.0.0.1
+server:
+  port: 6666
+
+---
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: 127.0.0.1
+server:
+  port: 7777
+
+---
+spring:
+  profiles: peer3
+eureka:
+  instance:
+    hostname: 127.0.0.1
+server:
+  port: 8888
